@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: Rest api para uma pequena app de recursos humanos management
+  version: 0.0.0
+paths:
+  /api/departamentos/:
+    get:
+      operationId: api_departamentos_retrieve
+      description: Retorna todos os Departamentos
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
