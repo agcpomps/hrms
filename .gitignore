@@ -7,4 +7,5 @@ local_settings.py
 .pytest_cache
 .vscode
 .env
+hrmvenv
 db.sqlite3
